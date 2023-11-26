@@ -1,0 +1,10 @@
+# Visual Studio files
+.vs/
+*.sln.DotSettings.user
+
+# Rider files
+.idea/
+
+# Binaries
+obj/
+bin/
