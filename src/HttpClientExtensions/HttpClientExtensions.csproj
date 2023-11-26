@@ -4,7 +4,30 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+
+    <Authors>leverindev</Authors>
+    <PackageId>HttpClientExtensions_leverindev</PackageId>
+    <PackageTags>extensions; http</PackageTags>
+    <Description>The HttpClientExtensions is a set of extension methods that makes sending HTTP requests with HttpClient more convenient and readable.</Description>
+    <RepositoryUrl>https://github.com/leverindev/http_client_extensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/leverindev/http_client_extensions</PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Title>HttpClientExtensions</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Link="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.1.1" />
