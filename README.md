@@ -30,3 +30,7 @@ var responseModel = result.Match(
 The `OneOf` library provides discriminated unions for C#, allowing to return a result or an error.
 
 The `Option` class offers an explicit way to indicate whether a return value is present or not.
+
+### NuGet
+
+[This package is available on the nuget.org](https://www.nuget.org/packages/HttpClientExtensions_leverindev)
