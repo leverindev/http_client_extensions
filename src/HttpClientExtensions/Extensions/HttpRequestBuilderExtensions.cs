@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Text;
 using HttpClientExtensions.Models;
 using Newtonsoft.Json;
@@ -83,6 +84,22 @@ public static class HttpRequestBuilderExtensions
         }
 
         var httpContent = new FormUrlEncodedContent(content!);
+
+        return builder.WithContent(httpContent);
+    }
+
+    public static HttpRequestBuilder WithMultipartFormDataContent(this HttpRequestBuilder builder, IEnumerable<KeyValuePair<string, string>>? content)
+    {
+        if (content.IsNullOrEmpty())
+        {
+            return builder;
+        }
+
+        var httpContent = new MultipartFormDataContent();
+        foreach (var pair in content!)
+        {
+            httpContent.Add(new StringContent(pair.Value, Encoding.UTF8, MediaTypeNames.Text.Plain), pair.Key);
+        }
 
         return builder.WithContent(httpContent);
     }
